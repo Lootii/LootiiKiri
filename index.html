@@ -39,9 +39,17 @@
                 <p>Hello! My name is Lootii Kiri. I'm a Computer Science student passionate about AI, machine learning and algorithms. I love learning new technologies and building exciting projects.</p>
                 <p>In addition to my academic pursuits, I am actively involved in various activities and projects. Feel free to explore more about my academics, athletics, and businesses below.</p>
             </div>
-            <div class="about-image">
-                <img src="./images/me2.jpg" alt="Lootii Kiri">
+            <!-- Gallery container for images -->
+        <div class="about-image-gallery">
+            <div class="about-image-wrapper">
+                <img src="images/me2.jpg" alt="Lootii Kiri" class="about-img" id="about-img-1">
+                <img src="images/me4.jpg" alt="Lootii Kiri" class="about-img" id="about-img-2">
             </div>
+            
+            <!-- Arrows for navigation -->
+            <button class="gallery-arrow left-arrow" id="prev-arrow">&#10094;</button>
+            <button class="gallery-arrow right-arrow" id="next-arrow">&#10095;</button>
+        </div>
         </div>
         <div class="highlight-container">
             <span class="highlight" onclick="showPopup('academics')">Academics</span> |
@@ -51,7 +59,7 @@
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Computer Skills</h2>
         <ul>
             <li>Programming Languages: Java, Python, JavaScript, C++</li>
             <li>Machine Learning & AI (Jupiter Notebook, Sckit-Learn)</li>
@@ -64,8 +72,9 @@
         <h2>Hobbies</h2>
         <ul>
             <li>Basketball</li>
-            <li>Running</li>
-            <li>Reading Science Fiction</li>
+            <li>Fitness</li>
+            <li>Learning(reading books, watching podcasts)</li>
+            <li>Coding</li>
             <li>Exploring new technologies</li>
         </ul>
     </section>

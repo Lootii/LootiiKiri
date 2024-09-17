@@ -57,3 +57,35 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
     
 });
+
+// --- Start of Image Gallery Functionality ---
+
+// Get all images and arrows
+const images = document.querySelectorAll('.about-img');
+const prevArrow = document.getElementById('prev-arrow');
+const nextArrow = document.getElementById('next-arrow');
+
+let currentIndex = 0;
+
+// Function to show image based on index
+function showImage(index) {
+    // Hide all images
+    images.forEach(image => image.classList.remove('active'));
+
+    // Show the current image
+    images[index].classList.add('active');
+}
+
+// Show the first image by default
+showImage(currentIndex);
+
+// Event listeners for arrows
+nextArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length; // Loop to the first image
+    showImage(currentIndex);
+});
+
+prevArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image
+    showImage(currentIndex);
+});
