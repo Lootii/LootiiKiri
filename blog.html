@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Lootii Kiri</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lootii Kiri's Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Blog">
+        <h2>Blog</h2>
+        <div id="blog-container"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lootii Kiri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const blogContainer = document.getElementById('blog-container');
+
+        fetch('posts.json')  // Fetch posts from your JSON file
+        .then(response => response.json())
+        .then(posts => {
+            posts.forEach(post => {
+                const postElement = document.createElement('article');
+                postElement.classList.add('blog-post');
+                postElement.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>Posted on <span class="post-date">${post.date}</span></p>
+                    <p>${post.content}</p>
+                `;
+                blogContainer.appendChild(postElement);
+            });
+        })
+        .catch(error => console.error('Error loading blog posts:', error));
+    </script>
+
+
+</body>
+
+</html>

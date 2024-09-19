@@ -1,6 +1,7 @@
 /* Header */
 header {
-    background-color: #ffffff; /* White background for a clean look */
+    background-color: #feffff; /* White background for a clean look */
+    /*background-image: url('images/coding.jpg');*/
     color: #333; /* Dark text color for readability */
     padding: 20px 0; /* Adequate padding */
     text-align: center;
@@ -12,7 +13,7 @@ header {
     border-bottom: 3px solid #007BFF; /* Modern blue border for a sleek look */
 }
 
-/* Header Title */
+ /* Header Title */
 header h1 {
     font-size: 2.5em;
     margin: 0;
@@ -20,36 +21,76 @@ header h1 {
     color: #333; 
 }
 
-/* Navigation Styles */
 nav {
     margin-top: 10px;
 }
 
+/* Header Styling */
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
+    position: relative;
     display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #007BFF; 
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    background-color: #007BFF;
+    
     transition: color 0.3s, background-color 0.3s;
     border-radius: 4px;
 }
 
 nav ul li a:hover {
-    color: #ffffff; 
-    background-color: #007BFF; 
+    background-color: #0056b3;
 }
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #007BFF;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #0056b3;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -126,11 +167,14 @@ h2 {
 }
 
 #hobbies ul li {
+    display: flex; /* Align items horizontally */
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
     background-color: #f9f9f9; /* Consistent light background */
     margin: 15px 0;
     padding: 20px;
     border-radius: 8px;
-    border-left: 5px solid #007BFF; 
+    border-left: 5px solid #007BFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -138,6 +182,31 @@ h2 {
 #hobbies ul li:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+#hobbies ul li video {
+    max-width: 1000px; /* Adjust image/video width */
+    max-height: 400px; /* Adjust image/video height */
+    margin-right: 20px; /* Space between media and text */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image/video doesn't distort */
+}
+
+#hobbies ul li img{
+    max-width: 300px; /* Adjust image/video width */
+    max-height: 300px; /* Adjust image/video height */
+    margin-right: 20px; /* Space between media and text */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image/video doesn't distort */
+}
+
+/* Text styling for hobbies list */
+#hobbies ul li p {
+    flex-grow: 1; /* Allow the text to take up remaining space */
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Text size */
+    line-height: 1.5; /* Text line spacing */
 }
 
 /* Contact Section */

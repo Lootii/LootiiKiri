@@ -19,20 +19,37 @@
     </script>
 </head>
 <body>
-    <header>
+   <!--- <header>
         <h1>Lootii Kiri</h1>
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#Blog">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <header>
+        <h1>Lootii Kiri</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#about-me">About Me</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about-me">
         <h2>About Me</h2>
         <div class="about-container">
             <div class="about-text">
@@ -70,16 +87,33 @@
 
     <section id="hobbies">
         <h2>Hobbies</h2>
-        <ul>
-            <li>Basketball</li>
-            <li>Fitness</li>
-            <li>Learning(reading books, watching podcasts)</li>
-            <li>Coding</li>
-            <li>Exploring new technologies</li>
+        <ul class="hobbies-list">
+            <li>
+                <span>Basketball</span>
+                <img src="images/basketball.jpg" alt="Basketball" class="hobby-media">
+            </li>
+            <li>
+                <span>Fitness</span>
+                <img src="images/fitness.jpg" alt="Fitness" class="hobby-media">
+            </li>
+            <li>
+                <span>Learning (reading books, watching podcasts)</span>
+                <img src="images/learning.jpg" alt="Learning" class="hobby-media">
+            </li>
+            <li>
+                <span>Coding</span>
+                <img src="images/coding2.png" alt="coding2" class="hobby-media">
+                <img src="images/coding.JPG" alt="Coding" class="hobby-media">
+                <img src="images/coding3.png" alt="coding3" class="hobby-media">
+            </li>
+            <li>
+                <span>Exploring new technologies</span>
+                <img src="images/tech.jpg" alt="Exploring new technologies" class="hobby-media">
+            </li>
         </ul>
     </section>
 
-    <section id="Blog">
+   <!--  <section id="Blog">
         <h2>Blog</h2>
         <div id="blog-container"></div>
     </section>
@@ -102,7 +136,7 @@
             });
         })
         .catch(error => console.error('Error loading blog posts:', error));
-    </script>
+    </script>  -->
     
 
     <section id="contact">
@@ -137,6 +171,22 @@
 
     
     <script src="scripts.js"></script>
+
+    <script>
+        // JavaScript for smooth scrolling for older browsers
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({
+                    behavior: 'smooth', // smooth scrolling behavior
+                    block: 'start'
+                });
+            });
+        });
+    </script>  
+    
 </body>
 </html>
 
