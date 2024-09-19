@@ -1,67 +1,86 @@
-/* Header */
-header {
-    background-color: #feffff; /* White background for a clean look */
-    /*background-image: url('images/coding.jpg');*/
-    color: #333; /* Dark text color for readability */
-    padding: 20px 0; /* Adequate padding */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid #007BFF; /* Modern blue border for a sleek look */
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 
- /* Header Title */
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    font-weight: bold;
-    color: #333; 
-}
-
-nav {
-    margin-top: 10px;
-}
-
-/* Header Styling */
-nav ul {
-    list-style: none;
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    color: #777;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-nav ul li {
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Header */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('images/Header Background.jpg'); /* Replace with your background image */
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 30px;
     position: relative;
-    display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
+/* Band Name / Main Title Styling */
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 6em;
+}
+
+/* Navigation Styles */
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    color: #fff;
-    background-color: #007BFF;
-    
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #0056b3;
+.main-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Dropdown Content */
+/* Hover Effect for Navigation Links */
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #007BFF;
+    background-color: rgba(0, 0, 0, 0.8);
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    border-radius: 4px;
 }
 
 .dropdown-content li {
@@ -71,43 +90,36 @@ nav ul li a:hover {
 .dropdown-content li a {
     padding: 10px 15px;
     text-decoration: none;
-    color: #fff;
+    color: white;
     display: block;
 }
 
 .dropdown-content li a:hover {
-    background-color: #0056b3;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Show dropdown on hover */
+/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+    .band-name-large {
+        font-size: 4em;
     }
 
-    nav ul li {
+    .nav ul li {
         display: block;
         margin: 10px 0;
     }
 
-    nav ul li a {
+    .nav a {
         font-size: 1em;
         padding: 10px;
     }
 }
+
 
 
 
@@ -259,7 +271,8 @@ h2 {
 }
 
 .hobby-media {
-    max-width: 300px;
+    max-width: 550px;
+    max-height: 355px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

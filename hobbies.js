@@ -1,7 +1,7 @@
 const hobbies = [
     {
         title: 'Basketball',
-        media: '<img src="images/coding2.png" alt="coding2" class="hobby-media">'
+        media: ' <video class="hobby-media" controls> <source src="videos/basketball.mp4" type="video/mp4"> Your browser does not support the video tag. </video> '
     },
     {
         title: 'Fitness',

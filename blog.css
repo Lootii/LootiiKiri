@@ -1,28 +1,52 @@
-/* Blog-specific styles */
-body {
-    background-color: #f0f4f8;
-    font-family: Arial, sans-serif;
-    color: #333;
-    padding: 0 20px;
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 10;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('Images/Header Background.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: #f0f4f8;
 }
 
 header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 20px 0;
+    background-color: rgba(149, 147, 147, 0.6);
+    background-image: url('Images/Header Background.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 header h1 {
+    font-family: "Booter - Zero Zero", sans-serif;
+    font-size: 4em;
+    font-weight: normal;
+    color: white;
     margin: 0;
-    font-size: 2.5rem;
+}
+
+nav {
+    margin-top: 10px;
+    font-size: 1.1rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
 }
 
 nav ul li {
@@ -31,14 +55,20 @@ nav ul li {
 }
 
 nav ul li a {
+    display: inline-block;
+    padding: .5em;
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, .3);
 }
 
 #blog-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1.5em;
 }
 
 .blog-post {
@@ -55,11 +85,13 @@ nav ul li a {
 }
 
 .blog-post h3 {
+    font-family: "Metal Mania", cursive;
     color: #007BFF;
 }
 
 .blog-post p {
     line-height: 1.6;
+    color: #333;
 }
 
 .post-date {
@@ -71,6 +103,12 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #007BFF;
-    color: white;
+    background-color: rgba(146, 134, 134, 0.6);
+    color: rgb(255, 255, 255);
 }
+
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
