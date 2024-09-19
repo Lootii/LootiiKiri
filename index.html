@@ -19,18 +19,6 @@
     </script>
 </head>
 <body>
-   <!--- <header>
-        <h1>Lootii Kiri</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
 
     <header>
         <h1>Lootii Kiri</h1>
@@ -87,56 +75,18 @@
 
     <section id="hobbies">
         <h2>Hobbies</h2>
-        <ul class="hobbies-list">
-            <li>
-                <span>Basketball</span>
-                <img src="images/basketball.jpg" alt="Basketball" class="hobby-media">
-            </li>
-            <li>
-                <span>Fitness</span>
-                <img src="images/fitness.jpg" alt="Fitness" class="hobby-media">
-            </li>
-            <li>
-                <span>Learning (reading books, watching podcasts)</span>
-                <img src="images/learning.jpg" alt="Learning" class="hobby-media">
-            </li>
-            <li>
-                <span>Coding</span>
-                <img src="images/coding2.png" alt="coding2" class="hobby-media">
-                <img src="images/coding.JPG" alt="Coding" class="hobby-media">
-                <img src="images/coding3.png" alt="coding3" class="hobby-media">
-            </li>
-            <li>
-                <span>Exploring new technologies</span>
-                <img src="images/tech.jpg" alt="Exploring new technologies" class="hobby-media">
-            </li>
-        </ul>
+        <div class="hobbies-gallery">
+            <!-- Left Arrow -->
+            <button class="arrow prev-arrow" onclick="showPreviousHobby()">&#10094;</button>
+    
+            <!-- Hobby Display -->
+            <div id="hobby-display" class="hobby-item"> </div>
+    
+            <!-- Right Arrow -->
+            <button class="arrow next-arrow" onclick="showNextHobby()">&#10095;</button>
+        </div>
     </section>
 
-   <!--  <section id="Blog">
-        <h2>Blog</h2>
-        <div id="blog-container"></div>
-    </section>
-    
-    <script>
-        const blogContainer = document.getElementById('blog-container');
-    
-        fetch('posts.json')
-        .then(response => response.json())
-        .then(posts => {
-            posts.forEach(post => {
-                const postElement = document.createElement('article');
-                postElement.classList.add('blog-post');
-                postElement.innerHTML = `
-                    <h3>${post.title}</h3>
-                    <p>Posted on <span class="post-date">${post.date}</span></p>
-                    <p>${post.content}</p>
-                `;
-                blogContainer.appendChild(postElement);
-            });
-        })
-        .catch(error => console.error('Error loading blog posts:', error));
-    </script>  -->
     
 
     <section id="contact">
@@ -168,9 +118,9 @@
     </div>
 
     <script src="scripts.js"></script>
+    <script src="hobbies.js"></script>
 
     
-    <script src="scripts.js"></script>
 
     <script>
         // JavaScript for smooth scrolling for older browsers

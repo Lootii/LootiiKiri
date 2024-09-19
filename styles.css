@@ -160,53 +160,82 @@ h2 {
 }
 
 /* Hobbies Section */
-#hobbies ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#hobbies {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fefefe;
 }
 
-#hobbies ul li {
-    display: flex; /* Align items horizontally */
-    justify-content: space-between;
-    align-items: center; /* Vertically center items */
-    background-color: #f9f9f9; /* Consistent light background */
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #007BFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+#hobbies h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
 }
 
-#hobbies ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Gallery container */
+.hobbies-gallery {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-#hobbies ul li video {
-    max-width: 1000px; /* Adjust image/video width */
-    max-height: 400px; /* Adjust image/video height */
-    margin-right: 20px; /* Space between media and text */
-    border-radius: 8px; /* Rounded corners */
-    object-fit: cover; /* Ensure the image/video doesn't distort */
+.hobby-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between images */
+    flex-wrap: wrap;
 }
 
-#hobbies ul li img{
-    max-width: 300px; /* Adjust image/video width */
-    max-height: 300px; /* Adjust image/video height */
-    margin-right: 20px; /* Space between media and text */
-    border-radius: 8px; /* Rounded corners */
-    object-fit: cover; /* Ensure the image/video doesn't distort */
+.hobby-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Text styling for hobbies list */
-#hobbies ul li p {
-    flex-grow: 1; /* Allow the text to take up remaining space */
-    margin: 0; /* Remove default margin */
-    font-size: 18px; /* Text size */
-    line-height: 1.5; /* Text line spacing */
+.hobby-item {
+    display: block;
+    max-width: 100%;
+}
+
+.hobby-item.active {
+    display: block;
+}
+
+.hobby-media {
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Arrows for navigation */
+.arrow {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: #0056b3;
 }
 
 /* Contact Section */
