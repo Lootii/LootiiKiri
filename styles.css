@@ -159,6 +159,60 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Styles for the Top Course Grades subsection */
+.grades-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grades-section h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Flexbox layout for grade categories side by side */
+.grade-group {
+    display: flex;
+    gap: 20px; /* Adjust the space between categories */
+    flex-wrap: wrap; /* Allows wrapping if screen size is small */
+    justify-content: center; /* Center the content */
+    color: #000000;
+}
+
+.grade-category {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 100%;
+    max-width: 220px; /* Adjust the width of each category */
+    flex: 1 1 300px; /* Allows flexibility and wrapping */
+}
+
+.grade-category h4 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.grades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grade-item {
+    font-size: 1rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Hobbies Section */
 #hobbies {
     text-align: center;
