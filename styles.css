@@ -148,6 +148,19 @@ h2 {
     font-size: 1em;
     line-height: 1.6;
 }
+.about-text p {
+    margin-bottom: 20px; 
+}
+
+.highlight-text {
+    font-family: 'Courier New', Courier, monospace; /* Change to a coding-like font */
+    color: #046707; /* Change to your desired color */
+    font-weight: bolder; /* Make it bold if desired */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for effect */
+    font-size: larger;
+    font-style: italic;
+}
+
 
 /* Skills Section */
 #skills ul {
@@ -380,12 +393,14 @@ footer p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
+    max-width: 900px;
+    text-align: left;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: scale(0.8); /* Start smaller */
     animation: zoomIn 0.5s forwards; /* Zoom-in effect */
 }
+
 
 @keyframes fadeIn {
     from {
@@ -419,6 +434,36 @@ footer p {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Popup content layout */
+.popup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Text and media styling */
+.popup-text {
+    display: flex;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.popup-media {
+    width:auto; /* Ensures the image container takes full width */
+    text-align: center;
+    
+}
+
+.popup-img, .popup-video {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 600px;
+    
+
 }
 
 .highlight-container {

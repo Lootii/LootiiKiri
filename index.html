@@ -41,7 +41,12 @@
         <h2>About Me</h2>
         <div class="about-container">
             <div class="about-text">
-                <p>Hello! My name is Lootii Kiri. I'm a Computer Science student passionate about AI, machine learning and algorithms. I love learning new technologies and building exciting projects.</p>
+                <p><span class="highlight-text">Hello World!</span> My name is Lootii Kiri. I'm a highly motivated 4th year Computer Science student at the University of Ottawa with great interest in algorithms, passionate about machine learning concepts and intrigued by Artificial Intelligence & Cryptography. Additionally, amongst many other things, I’m also a substitute teacher(ECS) for the Ottawa-Carleton District School Board and a self employed Math, Science & Coding Tutor with past experience tutoring at St-Laurent Academy Private school. I love sharing knowledge, which can only be done by acquiring it and so I admire the process of learning just as much!    
+                </p>
+                <p>
+                    “Gaining knowledge is the first step to wisdom; sharing it is the first step to humanity.” - unknown.
+                </p>
+                <p>“Teaching is a great way to keep learning.” - Matthea Harvey.</p>
                 <p>In addition to my academic pursuits, I am actively involved in various activities and projects. Feel free to explore more about my academics, athletics, and businesses below.</p>
             </div>
             <!-- Gallery container for images -->
@@ -58,7 +63,7 @@
         </div>
         <div class="highlight-container">
             <span class="highlight" onclick="showPopup('academics')">Academics</span> |
-            <span class="highlight" onclick="showPopup('athletics')">Athletics</span> |
+            <span class="highlight" onclick="showPopup('lifestyle')">Lifestyle</span> |
             <span class="highlight" onclick="showPopup('businesses')">Businesses</span>
         </div>
     </section>
@@ -154,10 +159,12 @@
     </footer>
 
     
+    
+
     <div id="popup-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closePopup()">&times;</span>
-            <p id="popup-text"></p>
+            <div id="popup-text"></div> <!-- This will now display text and media -->
         </div>
     </div>
 
