@@ -32,21 +32,26 @@
     <script>
         const blogContainer = document.getElementById('blog-container');
 
-        fetch('posts.json')  // Fetch posts from your JSON file
-        .then(response => response.json())
-        .then(posts => {
-            posts.forEach(post => {
-                const postElement = document.createElement('article');
-                postElement.classList.add('blog-post');
-                postElement.innerHTML = `
-                    <h3>${post.title}</h3>
-                    <p>Posted on <span class="post-date">${post.date}</span></p>
-                    <div>${post.content}</div>
-                `;
-                blogContainer.appendChild(postElement);
-            });
-        })
-        .catch(error => console.error('Error loading blog posts:', error));
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                posts.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.classList.add('blog-post');
+                    
+                    // Render image if available
+                    const imageHtml = post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" class="blog-post-image">` : '';
+                    
+                    postElement.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p>Posted on <span class="post-date">${post.date}</span></p>
+                        ${imageHtml}
+                        <div>${post.content}</div>
+                    `;
+                    blogContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => console.error('Error loading blog posts:', error));
     </script>
 
 

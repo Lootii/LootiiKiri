@@ -9,7 +9,7 @@ const hobbies = [
     },
     {
         title: 'Coding',
-        media: '<img src="images/coding2.png" alt="coding2" class="hobby-media"><img src="images/coding.JPG" alt="Coding" class="hobby-media"><img src="images/coding3.png" alt="coding3" class="hobby-media">'
+        media: '<img src="images/coding2.png" alt="coding2" class="hobby-media"><img src="images/coding.jpg" alt="Coding" class="hobby-media"><img src="images/coding3.png" alt="coding3" class="hobby-media">'
     },
     {
     title: 'Self-development (reading books, watching podcasts)',
