@@ -393,7 +393,7 @@ footer p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: left;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -449,6 +449,17 @@ footer p {
     display: flex;
     flex: 1;
     padding-right: 20px;
+}
+
+.popup-text a {
+    color: #007bff; /* Change this color to your preferred link color */
+    text-decoration: underline; /* Underline the link */
+    font-weight: bold; /* Optional: Make the link bold */
+}
+
+.popup-text a:hover {
+    color: #0056b3; /* Change color on hover for better visibility */
+    text-decoration: underline; /* Keep the underline on hover */
 }
 
 .popup-media {

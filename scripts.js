@@ -18,7 +18,7 @@ function showPopup(section) {
         lifestyle: `
             <div class="popup-content">
                 <div class="popup-text">
-                    <p>In athletics, I have a passion for basketball and long-distance running, which keeps me active and healthy.</p>
+                    <p>As a multisport athlete who later specialized in basketball, competing in the top league in Canada (OSBA), I developed a diverse range of habits that go beyond what someone focused on just one area might experience. I prioritize my health, fitness, and overall well-being, maintaining a lifestyle that is both goal-oriented and balanced. I like to think of myself as a living paradox, challenging the typical stereotypes of a computer science student by excelling in multiple areas of life. I believe being well-rounded opens the door to greater opportunities. My daily routine includes work, study, planning, staying active, and socializing. I am currently focused on getting into peak physical condition, training for half marathons, and working toward becoming a personal trainer. At the same time, I am enhancing my programming skills through extracurricular studies to secure my ideal job in tech, while also managing a couple of business ventures. As a black women in tech, education, fitness and entrepreneur, I want to be an example and leader for those like me that anything is possible if you put your mind to it. I aspire to inspire! </p>
                 </div>
                 <div class="popup-media">
                     <video controls class="popup-video">
@@ -30,10 +30,10 @@ function showPopup(section) {
         businesses: `
             <div class="popup-content">
                 <div class="popup-text">
-                    <p>I have experience with various business ventures and projects, emphasizing entrepreneurship and innovation. Tutor and basketball service business as well as a freelance web development startup starting soon with a partner.</p>
+                    <p>I am the founder of Elite Tutoring, a sole proprietorship where I offer personalized math, science, and coding tutoring services. In addition to my passion for education, I co-own <a href="https://lootii.github.io/SSBasketball/" target="_blank">SSBasketball</a>, a training service company that I run with a former basketball teammate to help athletes enhance their skills. I’m also exploring a new venture in freelance web development, collaborating with a computer science classmate to turn our shared expertise into a thriving business. My entrepreneurial spirit drives me to pursue opportunities that combine my skills and passions across multiple fields.</p>
                 </div>
                 <div class="popup-media">
-                    <img src="images/business.jpg" alt="Business Ventures" class="popup-img">
+                    <img src="images/SSB.jpg" alt="Business Ventures" class="popup-img">
                 </div>
             </div>`
     };
