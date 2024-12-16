@@ -1,0 +1,7 @@
+[
+    {
+      "title": "A Guide to Cryptography",
+      "date": "December 15, 2024",
+      "content": "<div class='publication-content'><iframe id='iframe-1' src='Notes.html' width='100%' height='600px'></iframe><button class='fullscreen-btn' onclick='toggleFullscreen()'>Fullscreen</button></div>"
+    }
+]

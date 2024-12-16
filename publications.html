@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Publications - Lootii Kiri</title>
+    <link rel="stylesheet" href="publications.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lootii Kiri's Publications</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Publications">
+        <h2>Publications</h2>
+        <div id="publications-container"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lootii Kiri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const publicationsContainer = document.getElementById('publications-container');
+    
+        fetch('publications.json')
+            .then(response => response.json())
+            .then(posts => {
+                posts.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.classList.add('publications-post');
+                    
+                    // Render image if available
+                    const imageHtml = post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" class="publications-post-image">` : '';
+                    
+                    postElement.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p>Posted on <span class="post-date">${post.date}</span></p>
+                        ${imageHtml}
+                        <div>${post.content}</div>
+                    `;
+                    publicationsContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => console.error('Error loading publications posts:', error));
+    
+        let isFullscreen = false;
+    
+        // Toggle Fullscreen functionality
+        function toggleFullscreen() {
+            const iframe = document.getElementById('iframe-1');
+            const exitFullscreenBtn = document.querySelector('.exit-fullscreen-btn');
+    
+            if (isFullscreen) {
+                exitFullscreen();
+            } else {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) { // Firefox
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) { // IE/Edge
+                    iframe.msRequestFullscreen();
+                }
+                // Show the exit fullscreen button
+                exitFullscreenBtn.style.display = 'inline-block';
+                isFullscreen = true;
+            }
+        }
+    </script>
+    
+</body>
+</html>
