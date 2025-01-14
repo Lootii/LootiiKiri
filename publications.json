@@ -1,5 +1,10 @@
 [
     {
+        "title": "Honours project: Sentimental Analysis on Product Reviews Using Time Recency Weighted Neural Networks and Machine Learning Models",
+        "date": "December 20, 2024",
+        "content": "coming soon..."
+    },
+    {
       "title": "A Guide to Cryptography",
       "date": "December 15, 2024",
       "content": "<div class='publication-content'><iframe id='iframe-1' src='Notes.html' width='100%' height='600px'></iframe><button class='fullscreen-btn' onclick='toggleFullscreen()'>Fullscreen</button></div>"

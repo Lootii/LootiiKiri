@@ -161,6 +161,13 @@ h2 {
     font-style: italic;
 }
 
+.highlight-text2 {
+    font-family: 'Courier New', Courier, monospace; /* Change to a coding-like font */
+    color: #000000; /* Change to your desired color */
+    font-weight: bolder; /* Make it bold if desired */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for effect */
+
+}
 
 /* Skills Section */
 #skills ul {
